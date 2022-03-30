@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
+    <style>
+   
+       @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+        body {
+            background-image: linear-gradient(black, #171717 );
+            width: 100vw;
+            height: 100vw;
+            text-align: center;
+            color: white;
+            font-family:'Bangers';
+            border: 2px solid red;
+            
+        }
+        #Tite {
+            font-size: 70px;
+            animation-name: Titeles;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+            border: 3px solid red;
+          
+
+        }
+        @keyframes Titeles {
+            from {
+                border: 3px solid black;
+                font-size: 0px;
+                color: black;
+                transform: rotate(360deg);
+            }
+            to {
+                border: 3px solid red;
+                font-size: 70px;
+                color: white;
+                transform: rotate(0deg);
+            }
+        }
+        h3 {
+            font-size: 45px;
+        }
+        h2 {
+            font-size:25px
+        }
+
+        img {
+            display: none;
+            width: 300px;
+            border: 2px solid red;
+        }
+
+        #h1, #h2, #h3, #h4, #h5 {
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            
+        }
+
+        input {
+            border: 1px ridge red;
+            height: 25px;
+        }
+
+        button {
+            height: 40px;
+        }
+        hr {
+            color: red;
+           border: 2px solid red;
+           
+        }
+        div {
+            animation-name: script;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+          
+           margin: auto;
+            
+        }
+
+        @keyframes script {
+            from {
+                
+                color: black;
+                transform: rotate(360deg);
+            }
+
+            to {
+                
+                color: white;
+                transform: rotate(0deg);
+            }
+        }
+
+        #one {
+          
+            font-size: 70px;
+        }
+
+       
+       
+
+
+        
+    </style>
+</head>
+<body>
+    <hr>
+    <header>
+        <h1 id="Tite" > <i>Riddle App</i></h1>
+    </header>
+   <div>
+    <h3 id="Score">Score:</h3> <br>
+    <h2>What is always infront of you but can't be seen?</h2>
+    <button class="btn btn-outline-danger"id="h1" onclick="h1()">Hint</button>&nbsp;  
+      <input type="text" id="a1">   
+     &nbsp;<button class="btn btn-outline-danger"id="s1" onclick="s1()">Enter</button><br><br>
+    
+     <img id="i1" src="https://images.ctfassets.net/cnu0m8re1exe/50ajiOtj98kEb0XVR38qDf/30090bc82230aca9e152fdd231a0b7ed/clock-spiral.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill" alt="">
+     <h4 id="c1"></h4>
+
+
+
+     <h2>What goes up but never comes down?</h2>
+    <button class="btn btn-outline-danger"id="h2" onclick="h2()">Hint</button>&nbsp;  
+      <input type="text" id="a2">   
+     &nbsp;<button class="btn btn-outline-danger"id="s2" onclick="s2()">Enter</button><br><br>
+    
+     <img id="i2" src="https://zappenglish.com/wp-content/uploads/2012/12/3.19_Colloquial_English_Age_Stages.jpg" alt="">
+     <h4 id="c2"></h4>
+
+
+     <h2> What gets wet while drying?</h2>
+    <button class="btn btn-outline-danger"id="h3" onclick="h3()">Hint</button>&nbsp;  
+      <input type="text" id="a3">   
+     &nbsp;<button class="btn btn-outline-danger"id="s3" onclick="s3()">Enter</button><br><br>
+    
+     <img id="i3" src="https://cf.shopee.ph/file/3317ddc5e187c2d3365a89ff714e0b34" alt="">
+     <h4 id="c3"></h4>
+
+
+     <h2>I shave every day, but my beard stays the same. What am I?</h2>
+    <button class="btn btn-outline-danger" id="h4" onclick="h4()">Hint</button>&nbsp;  
+      <input type="text" id="a4">   
+     &nbsp;<button class="btn btn-outline-danger"id="s4" onclick="s4()">Enter</button><br><br>
+    
+     <img id="i4" src="https://cdn4.vectorstock.com/i/1000x1000/53/48/trendy-barber-man-vector-35975348.jpg" alt="">
+     <h4 id="c4"></h4>
+
+
+     <h2>What can't talk but will reply when spoken to?</h2>
+    <button class="btn btn-outline-danger"id="h5" onclick="h5()">Hint</button>&nbsp;  
+      <input type="text" id="a5">   
+     &nbsp;<button class="btn btn-outline-danger"id="s5" onclick="s5()">Enter</button><br><br>
+    
+     <img id="i5" src="https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/Echo_icon_egqd8v.jpg" alt="">
+     <h4 id="c5"></h4>
+     <br>
+     <button onclick="b1()" class="btn btn-outline-danger">Submit</button><br>
+     <h1 id="one"></h1>
+    
+   </div>
+   <hr>
+    
+    
+</body>
+<script>
+    var score=0;
+    var t1= false
+    var u1= false
+    
+    function s1() {
+        if (t1== false){
+            var a1= document.getElementById("a1").value;
+            t1= true
+        if(a1.toUpperCase()=="FUTURE") {
+            document.getElementById("c1").innerText=
+            "Correct Answer";
+            score= score + 1
+            document.getElementById("Score").innerText=
+            "Score: "+ score
+        }
+        else {
+            document.getElementById("c1").innerText=
+            "Wrong Answer!"
+        }
+        }
+        
+    }
+    function h1() {
+       if(u1== false){
+        document.getElementById("i1").style.display = "inline-block";
+        u1=true
+        score= score - 0.5
+        document.getElementById("Score").innerText=
+        "Score:" + score
+       }
+    }
+
+    var t2= false
+    var u2= false
+    function s2() {
+        if (t2== false){
+            var a2= document.getElementById("a2").value;
+            t2= true
+        if(a2.toUpperCase()=="AGE") {
+            document.getElementById("c2").innerText=
+            "Correct Answer";
+            score= score + 1
+            document.getElementById("Score").innerText=
+            "Score: "+ score
+        }
+        else {
+            document.getElementById("c2").innerText=
+            "Wrong Answer!"
+        }
+        }
+    }
+    function h2() {
+       if (u2==false) {
+        document.getElementById("i2").style.display = "inline-block";
+        u2= true
+        score= score - 0.5
+        document.getElementById("Score").innerText=
+        "Score:" + score
+       }
+
+    }
+    var t3= false
+    var u3= false
+    function s3() {
+        if (t3== false){
+            var a3= document.getElementById("a3").value;
+            t3=true
+        if(a3.toUpperCase()=="TOWEL") {
+            document.getElementById("c3").innerText=
+            "Correct Answer";
+            score= score + 1
+            document.getElementById("Score").innerText=
+            "Score: "+ score
+        }
+        else {
+            document.getElementById("c3").innerText=
+            "Wrong Answer!"
+        }
+        }
+    }
+    function h3() {
+        if (u3==false){
+            document.getElementById("i3").style.display = "inline-block";
+            u3=true
+        score= score - 0.5
+        document.getElementById("Score").innerText=
+        "Score:" + score
+        }
+    }
+
+    var t4= false
+    var u4= false
+    function s4() {
+       if (t4==false){
+        var a4= document.getElementById("a4").value;
+        t4=true
+        if(a4.toUpperCase()=="BARBER") {
+            document.getElementById("c4").innerText=
+            "Correct Answer";
+            score= score + 1
+            document.getElementById("Score").innerText=
+            "Score: "+ score
+        }
+        else {
+            document.getElementById("c4").innerText=
+            "Wrong Answer!"
+        }
+       }
+    }
+    function h4() {
+       if (u4== false){
+        document.getElementById("i4").style.display = "inline-block";
+        u4=true
+        score= score - 0.5
+        document.getElementById("Score").innerText=
+        "Score:" + score
+       }
+    }
+
+    var t5= false
+    var u5= false
+    function s5() {
+      if (t5==false) {
+        var a5= document.getElementById("a5").value;
+        t5= true
+        if(a5.toUpperCase()=="ECHO") {
+            document.getElementById("c5").innerText=
+            "Correct Answer";
+            score= score + 1
+            document.getElementById("Score").innerText=
+            "Score: "+ score
+        }
+        else {
+            document.getElementById("c5").innerText=
+            "Wrong Answer!"
+        }
+      }
+    }
+    function h5() {
+       if (u5==false) {
+        document.getElementById("i5").style.display = "inline-block";
+        u5=true
+        score= score - 0.5
+        document.getElementById("Score").innerText=
+        "Score:" + score
+       }
+    }
+
+    function b1() {
+        
+        if (score== 5){
+            document.getElementById("one").innerText =
+            "You got it all right!";
+        }
+        else {
+            document.getElementById("one").innerText= 
+            "Almost There!";
+        }
+        if (score==0) {
+            document.getElementById("one").innerText= 
+            "Be A little more Creative!";
+        }
+
+        
+
+    }
+</script>
+</html>
